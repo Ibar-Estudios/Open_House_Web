@@ -1,0 +1,17 @@
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(310px, 100%), 1fr)); gap: 26px; }
+.pcard { display: block; overflow: hidden; background: var(--card); border: 1px solid var(--line); border-radius: 20px; cursor: pointer; }
+.pcard.reveal { transition: transform .3s, box-shadow .3s, opacity .7s ease, translate .7s ease; }
+.pcard:hover { transform: translateY(-8px); box-shadow: 0 26px 40px rgba(8, 75, 102, .18); }
+.ph { position: relative; height: 230px; display: flex; align-items: flex-end; padding: 14px; background: linear-gradient(160deg, #2f7c99, var(--teal)); }
+.ph--b { background: linear-gradient(160deg, #f3b273, #c96f1f); }
+.ph--c { background: linear-gradient(160deg, #4b97a8, #0b5c56); }
+.ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.tag { position: absolute; top: 14px; left: 14px; z-index: 1; background: var(--or); color: #1a1005; font-weight: 700; font-size: 12px; padding: 5px 12px; border-radius: 999px; }
+.ftx { color: rgba(255,255,255,.75); font-size: 12px; }
+.pb { padding: 20px 22px 22px; }
+.pb h3 { font-size: 24px; color: var(--h); }
+.loc { color: var(--mut); font-size: 14px; margin: 4px 0 14px; }
+.meta { display: flex; gap: 18px; font-size: 14px; color: var(--mut); padding: 12px 0; border-top: 1px solid var(--line); }
+.price { font: 400 30px 'DM Serif Display', serif; color: var(--tx); }
+.price small { font: 500 13px Inter, sans-serif; color: var(--mut); }
+@media (max-width: 600px) { .grid { gap: 20px; } .ph { height: 200px; } .pb h3 { font-size: 22px; } }
